@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package com.example.demo.controller;
 
 import com.example.demo.model.User;
@@ -93,3 +94,10 @@ public class UserController {
         }
     }
 }
+=======
+package com.claimsprocessingplatform.processingplatform.controller;
+
+public class UserSvc {
+    
+}
+>>>>>>> b557076 (Test changes)
