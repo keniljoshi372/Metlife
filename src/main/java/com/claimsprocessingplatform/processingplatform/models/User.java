@@ -10,18 +10,14 @@ import java.util.List;
 @Document(collection = "users") 
 public class User {
 
-    // Primary Key: Maps to MongoDB's special _id field
     @Id
     private String id; 
 
-    // Custom Field Name: Maps the 'fullName' Java field to 'name' in MongoDB
     @Field("name")
     private String fullName;
 
-    // Indexed Field: Creates a unique index on the 'email' field in MongoDB
     @Indexed(unique = true)
     private String email;
 
-    // Simple Field: Maps to a field named 'age' in MongoDB
-    private int age;
+    private Int phonenumber;
 }
