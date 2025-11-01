@@ -11,11 +11,10 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/users") // Base path for all user-related APIs
-@CrossOrigin(origins = "*") // Allows cross-origin requests (e.g., from a frontend)
+@RequestMapping("/api/users")
+@CrossOrigin(origins = "*")
 public class UserController {
 
-    // Inject the repository to interact with the database
     private final UserRepository userRepository;
 
     @Autowired
@@ -23,10 +22,6 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
-    /**
-     * POST /api/users
-     * Creates a new user.
-     */
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         try {
@@ -41,10 +36,6 @@ public class UserController {
         }
     }
 
-    /**
-     * GET /api/users
-     * Retrieves all users.
-     */
     @GetMapping
     public List<User> getAllUsers() {
         return userRepository.findAll();
